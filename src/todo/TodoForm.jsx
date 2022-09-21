@@ -6,7 +6,7 @@ import { bindActionCreators } from "redux";
 
 import { changeDescription, search } from '../store/actions/form'
 
-class todoForm extends Component { 
+class TodoForm extends Component { 
     constructor(props) { 
         super(props)
 
@@ -33,7 +33,7 @@ class todoForm extends Component {
         <Grid cols='12 9 10'>
             <input className="form-control" type="text" id="description" placeholder="Adicione uma tarefa"
             value={this.props.description}
-            onKeyUp={keyHandler}
+            onKeyUp={this.keyHandler}
             onChange={this.props.changeDescription}
             />
             
@@ -53,34 +53,7 @@ class todoForm extends Component {
 ) }
 }
 
-const TodoForm = props => {
 
-
-    return ( 
-
-        <div role='form' className="todoForm">
-        <Grid cols='12 9 10'>
-            <input className="form-control" type="text" id="description" placeholder="Adicione uma tarefa"
-            value={props.description}
-            onKeyUp={this.keyHandler}
-            onChange={props.changeDescription}
-            />
-            
-
-        </Grid>
-           
-        <Grid cols='12 3 2'>
-
-        <IconButton style='primary' icon='plus' onClick={props.handleAdd} />
-        <IconButton style="info" icon="search" onClick={props.handleSearch}  />
-
-        <IconButton style="default" icon="close" onClick={props.handleClear} />
-        
-        </Grid>
-
-    </div>
-    )
-}
 
 const mapStateToProps = state => ({
     description: state.todo.description
