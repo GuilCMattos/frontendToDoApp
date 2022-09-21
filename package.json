@@ -39,7 +39,9 @@
     "axios": "^0.21.1",
     "bootstrap": "^3.4.1",
     "font-awesome": "^4.7.0",
+    "react-redux": "^8.0.2",
     "react-router": "^5.2.0",
-    "react-router-dom": "^5.2.0"
+    "react-router-dom": "^5.2.0",
+    "redux": "^4.2.0"
   }
 }
