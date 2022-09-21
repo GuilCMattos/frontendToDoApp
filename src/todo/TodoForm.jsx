@@ -14,7 +14,7 @@ class TodoForm extends Component {
        
     }
 
-    componentWillUnmount() { 
+    componentDidMount() { 
         this.props.search()
     }
 
@@ -63,7 +63,7 @@ const mapStateToProps = state => ({
 
 })
 
-const mapDispatchToProps = dispatch => bindActionCreators({ add, changeDescription, search  }, dispatch)
+const mapDispatchToProps = dispatch => bindActionCreators({ add, changeDescription, search }, dispatch)
 
 
 
